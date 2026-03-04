@@ -8,7 +8,7 @@
       "unitLabel": "por unidade",
       "emoji": "🍗",
       "description": "Massa crocante por fora, macia por dentro.",
-      "image": "https://images.unsplash.com/photo-1628198622150-1c39062eb1d4?q=80&w=600&auto=format&fit=crop"
+      "image": "/images/uploads/photo_2026-01-05_14-54-10.jpg"
     },
     {
       "id": "bolinha-queijo",
@@ -46,6 +46,16 @@
       "unitLabel": "lata 350ml",
       "emoji": "🥤",
       "description": "Gelo e limão a parte."
+    },
+    {
+      "unitLabel": "por unidade",
+      "emoji": "🥟",
+      "id": "coxinhaaa",
+      "name": "coxinhaaa mil grau",
+      "category": "assados",
+      "price": 3.5,
+      "description": "coxinhaaa mil grau ",
+      "image": "/images/uploads/photo_2026-01-05_14-54-10.jpg"
     }
   ]
 }
