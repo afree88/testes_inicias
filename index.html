@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salgadinhos & Cia – Festas, Buffet e Lanchonetes</title>
+    <meta name="description"
+        content="Os melhores salgadinhos para festas, buffet e lanchonetes. Faça seu pedido online e receba com praticidade!" />
+
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Pacifico&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Netlify Identity Widget para o CMS -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+
+<body>
+    <!-- HEADER (Estilo Site 1) -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <div class="logo">
+                <span class="logo-icon">🥟</span>
+                <div>
+                    <span class="logo-name">Salgadinhos <span class="logo-amp">&</span> Cia</span>
+                    <span class="logo-sub">Festas · Buffet · Lanchonete</span>
+                </div>
+            </div>
+            <nav class="nav-links" id="navLinks">
+                <a href="#catalogo">Cardápio</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+        </div>
+    </header>
+
+    <!-- HERO (Estilo Site 1) -->
+    <section class="hero" id="home">
+        <div class="hero-particles" id="heroParticles"></div>
+        <div class="hero-content">
+            <p class="hero-tag">✨ O sabor que faz sua festa brilhar</p>
+            <h1>Salgadinhos Fresquinhos<br /><span class="gradient-text">para toda ocasião</span></h1>
+            <p class="hero-desc">Festa, buffet ou lanchonete — temos tudo que você precisa com qualidade e sabor
+                irresistível. Faça seu pedido agora!</p>
+            <div class="hero-btns">
+                <a href="#catalogo" class="btn btn-primary">📋 Ver Cardápio</a>
+                <a href="#contato" class="btn btn-outline">📞 Fale Conosco</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><strong>+500</strong><span>Clientes Felizes</span></div>
+                <div class="stat"><strong>20+</strong><span>Itens no Cardápio</span></div>
+                <div class="stat"><strong>100%</strong><span>Artesanal</span></div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <!-- Imagem Padrão que será exibida -->
+            <img src="C:\Users\Talison\.gemini\antigravity\brain\bad82291-d391-4aa5-b0a8-87f695774814\hero_salgadinhos_1772634774042.png"
+                alt="Salgadinhos variados"
+                onerror="this.style.display='none';document.querySelector('.hero-emoji').style.display='block'" />
+            <div class="hero-emoji" style="display:none">🥟🍕🌭🧀🫔🍢</div>
+        </div>
+    </section>
+
+    <!-- BANNER FLUTUANTE (Estilo Site 1) -->
+    <div class="promo-banner">
+        <marquee behavior="scroll" direction="left">
+            🎉 Pedidos acima de 100 unidades com desconto especial! &nbsp;&nbsp;•&nbsp;&nbsp;
+            🚀 Entrega rápida para sua festa! &nbsp;&nbsp;•&nbsp;&nbsp;
+            ⭐ Salgadinhos artesanais feitos no dia! &nbsp;&nbsp;•&nbsp;&nbsp;
+            🎊 Buffet completo para eventos! &nbsp;&nbsp;•&nbsp;&nbsp;
+        </marquee>
+    </div>
+
+    <!-- CATALOGO (Adaptado Site 1 + Site 2) -->
+    <section class="categories-section" id="catalogo">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nosso <span class="gradient-text">Cardápio</span></h2>
+                <p>Selecione os itens desejados e monte seu pedido</p>
+            </div>
+
+            <div class="category-tabs" id="categoryTabs" role="tablist">
+                <button class="tab-btn active" data-cat="todos" role="tab">🍽️ Todos</button>
+                <button class="tab-btn" data-cat="fritos" role="tab">🔥 Fritos</button>
+                <button class="tab-btn" data-cat="assados" role="tab">🥐 Assados</button>
+                <button class="tab-btn" data-cat="caldinhos" role="tab">🍲 Caldos</button>
+                <button class="tab-btn" data-cat="bebidas" role="tab">🥤 Bebidas</button>
+            </div>
+
+            <div id="catalog-grid" class="products-grid">
+                <!-- Loader -->
+                <div class="loading-state" style="grid-column: 1/-1; text-align: center; padding: 40px;">
+                    <p style="color: var(--text-muted);">Preparando as delícias do cardápio...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE (Estilo Site 1) -->
+    <section class="about-section" id="sobre">
+        <div class="container about-grid">
+            <div class="about-text">
+                <h2>Por que escolher a <span class="gradient-text">Salgadinhos & Cia?</span></h2>
+                <p>Somos especialistas em salgados artesanais para todos os tipos de evento. Nossa produção é diária,
+                    com ingredientes frescos e muita dedicação para garantir o sabor que você merece.</p>
+                <ul class="about-list">
+                    <li>✅ Produção diária e artesanal</li>
+                    <li>✅ Ingredientes frescos e selecionados</li>
+                    <li>✅ Porções personalizadas por quantidade</li>
+                    <li>✅ Atendimento para festas, buffets e lanchonetes</li>
+                    <li>✅ Entrega rápida e confiável</li>
+                </ul>
+            </div>
+            <div class="about-cards">
+                <div class="about-card">🎂<h3>Festas</h3>
+                    <p>Pacotes especiais para aniversários, casamentos e corporativo.</p>
+                </div>
+                <div class="about-card">🍽️<h3>Buffet</h3>
+                    <p>Variedade completa para montar uma mesa farta.</p>
+                </div>
+                <div class="about-card">🏪<h3>Lanchonetes</h3>
+                    <p>Fornecimento regular e confiável para cantinas.</p>
+                </div>
+                <div class="about-card">🚀<h3>Entrega</h3>
+                    <p>Entregamos fresquinhos para você.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO (Estilo Site 1) -->
+    <section class="contact-section" id="contato">
+        <div class="container contact-inner">
+            <h2>Entre em <span class="gradient-text">Contato</span></h2>
+            <p>Fale conosco pelo WhatsApp para orçamentos e dúvidas!</p>
+            <div class="btn btn-whatsapp" style="margin: 0 auto; display: inline-flex;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                (99) 99175-6968
+            </div>
+            <div class="contact-info">
+                <span>📍 Atendemos toda a região</span>
+                <span>⏰ Seg – Sáb: 8h às 20h</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (Estilo Site 1) -->
+    <footer class="footer">
+        <p>© 2026 Salgadinhos & Cia · Todos os direitos reservados</p>
+        <p style="margin-top:6px;opacity:.6;font-size:.8rem">Feito com ❤️ para sua festa</p>
+    </footer>
+
+    <!-- Barra flutuante de carrinho (Estilo Site 2 reestilizado) -->
+    <div id="cart-bar" class="cart-bar hidden">
+        <div class="cart-bar-content">
+            <div class="cart-info">
+                <div class="cart-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span id="cart-badge" class="cart-badge">0</span>
+                </div>
+                <div class="cart-totals">
+                    <span class="cart-label">TOTAL</span>
+                    <span id="cart-total-price" class="cart-total-price">R$ 0,00</span>
+                </div>
+            </div>
+            <button id="view-cart-btn" class="btn btn-primary" style="padding: 10px 24px;">
+                Ver Pedido
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal do carrinho para revisão e envio (Estilo Site 2 reestilizado) -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 style="font-size: 1.5rem; font-weight: 700; color: #fff;">🛒 Revisar Pedido</h2>
+                <button id="close-modal-btn" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="cart-items-list" class="cart-items-list">
+                    <!-- Itens inseridos via JS -->
+                </div>
+
+                <div class="delivery-info">
+                    <p class="pickup-note">Pagamento e entrega serão combinados pelo WhatsApp.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-total-wrapper">
+                    <span class="total-label">Subtotal:</span>
+                    <strong id="modal-total-price" class="modal-total-price">R$ 0,00</strong>
+                </div>
+                <button id="send-whatsapp-btn" class="btn btn-whatsapp"
+                    style="width: 100%; justify-content: center; margin-top: 14px; font-size: 1.1rem; padding: 14px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="whatsapp-icon" style="margin-right:8px;">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                        </path>
+                    </svg>
+                    Pedir pelo WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container de notificações toast -->
+    <div class="toast" id="toast"></div>
+
+    <script src="app.js"></script>
+    <script>
+        // Netlify CMS auth redirect
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

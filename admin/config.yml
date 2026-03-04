@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: main # Mude para 'master' se seu repositório usar a master branch
+
+# Configuração para upload de imagens (salvas localmente no repositório)
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "catalog"
+    label: "Catálogo de Salgados"
+    description: "Gerencie todos os itens disponíveis no cardápio"
+    files:
+      - file: "data/catalog.json"
+        label: "Opções do Menu"
+        name: "menu_items"
+        fields:
+          - name: "items"
+            label: "Salgados no Cardápio"
+            label_singular: "Salgado"
+            widget: "list"
+            fields:
+              - {label: "ID do Produto (Sem espaços, ex: coxinha-frango)", name: "id", widget: "string"}
+              - {label: "Nome do Salgado", name: "name", widget: "string"}
+              - {label: "Descrição ou Ingredientes", name: "description", widget: "text", required: false}
+              - {label: "Preço (R$)", name: "price", widget: "number", value_type: "float", min: 0}
+              - {label: "Imagem do Salgado", name: "image", widget: "image", required: false}
