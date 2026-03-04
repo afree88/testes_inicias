@@ -108,12 +108,12 @@ async function loadCatalog() {
         }
 
         const data = await response.json();
-        // O json atual nao tem emojis, então preencheremos um fallback para ficar igual o Site 1
+        // Trata os dados do CMS
         catalogItems = (data.items || []).map(item => ({
             ...item,
-            emoji: '🥟',
-            category: 'fritos', // default category
-            unitLabel: 'por unidade'
+            emoji: item.emoji || '🥟',
+            category: item.category || 'fritos',
+            unitLabel: item.unitLabel || 'por unidade'
         }));
 
         renderCatalog();
