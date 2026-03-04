@@ -1,2 +1,0 @@
-# testes_inicias
-aprendendo
