@@ -8,7 +8,7 @@ public_folder: "/images/uploads"
 
 collections:
   - name: "catalog"
-    label: "Catálogo de Salgados"
+    label: "Cardápio de Salgados"
     description: "Gerencie todos os itens disponíveis no cardápio"
     files:
       - file: "data/catalog.json"
@@ -20,8 +20,24 @@ collections:
             label_singular: "Salgado"
             widget: "list"
             fields:
-              - {label: "ID do Produto (Sem espaços, ex: coxinha-frango)", name: "id", widget: "string"}
-              - {label: "Nome do Salgado", name: "name", widget: "string"}
+              - {label: "ID do Produto (Sem espaços, minúsculo, ex: coxinha-frango)", name: "id", widget: "string"}
+              - {label: "Nome", name: "name", widget: "string"}
+              - {label: "Categoria", name: "category", widget: "select", options: ["fritos", "assados", "caldinhos", "bebidas"]}
+              - {label: "Preço (Use ponto para centavos)", name: "price", widget: "number", value_type: "float", min: 0}
+              - {label: "Rótulo da Unidade (Ex: 'por unidade', 'pacote com 100')", name: "unitLabel", widget: "string", default: "por unidade"}
+              - {label: "Emoji", name: "emoji", widget: "string", default: "🥟", hint: "Copie e cole um emoji aqui para exibir no lugar da imagem."}
               - {label: "Descrição ou Ingredientes", name: "description", widget: "text", required: false}
-              - {label: "Preço (R$)", name: "price", widget: "number", value_type: "float", min: 0}
-              - {label: "Imagem do Salgado", name: "image", widget: "image", required: false}
+              - {label: "Imagem (Opcional, substitui o emoji)", name: "image", widget: "image", required: false}
+
+  - name: "settings"
+    label: "Configurações Globais"
+    description: "Gerencie informações principais do site."
+    files:
+      - file: "data/settings.json"
+        label: "Configurações do Site"
+        name: "site_settings"
+        fields:
+          - {label: "Número de WhatsApp", name: "whatsapp_number", widget: "string", hint: "Apenas números, com DDI. Ex: 5599991756968"}
+          - {label: "Título do Site", name: "site_title", widget: "string", default: "Salgadinhos & Cia"}
+          - {label: "Subtítulo do Site", name: "site_subtitle", widget: "string", default: "Festas · Buffet · Lanchonete"}
+          - {label: "Mensagem do Hero", name: "hero_title", widget: "string", default: "Salgadinhos Fresquinhos para toda ocasião"}

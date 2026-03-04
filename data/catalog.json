@@ -3,44 +3,49 @@
     {
       "id": "coxinha-frango",
       "name": "Coxinha de Frango com Catupiry",
-      "description": "Massa crocante por fora, macia por dentro, recheada com frango desfiado e autêntico requeijão.",
-      "price": 8,
+      "category": "fritos",
+      "price": 6.5,
+      "unitLabel": "por unidade",
+      "emoji": "🍗",
+      "description": "Massa crocante por fora, macia por dentro.",
       "image": "https://images.unsplash.com/photo-1628198622150-1c39062eb1d4?q=80&w=600&auto=format&fit=crop"
     },
     {
       "id": "bolinha-queijo",
       "name": "Bolinha de Queijo",
-      "description": "Muito queijo derretido em uma casquinha dourada e incrivelmente crocante.",
+      "category": "fritos",
       "price": 5.5,
+      "unitLabel": "por unidade",
+      "emoji": "🧀",
+      "description": "Muito queijo derretido em uma casquinha dourada.",
       "image": "https://images.unsplash.com/photo-1621508204620-8e6ad11ab4b8?q=80&w=600&auto=format&fit=crop"
-    },
-    {
-      "id": "pastel-carne",
-      "name": "Pastel de Carne",
-      "description": "Pastel frito na hora com recheio suculento de carne moída temperada.",
-      "price": 7,
-      "image": "https://images.unsplash.com/photo-1599321955726-e0484265b4ea?q=80&w=600&auto=format&fit=crop"
-    },
-    {
-      "id": "kibe-tradicional",
-      "name": "Kibe Tradicional",
-      "description": "Delicioso kibe frito com tempero sírio e hortelã fresca.",
-      "price": 6,
-      "image": "https://images.unsplash.com/photo-1614707267537-4c07bf25852b?q=80&w=600&auto=format&fit=crop"
     },
     {
       "id": "empada-frango",
       "name": "Empada de Frango",
-      "description": "Massa podre que desmancha na boca com recheio farto de frango e azeitona.",
+      "category": "assados",
       "price": 8,
-      "image": "https://images.unsplash.com/photo-1604908177453-7462950a6a3b?q=80&w=600&auto=format&fit=crop"
+      "unitLabel": "por unidade",
+      "emoji": "🥧",
+      "description": "Massa podre que desmancha na boca com recheio farto."
     },
     {
-      "id": "enroladinho-salsicha",
-      "name": "Enroladinho de Salsicha",
-      "description": "Massa de salgado assado recheado com salsicha de primeira linha.",
-      "price": 5,
-      "image": ""
+      "id": "caldo-feijao",
+      "name": "Caldo de Feijão",
+      "category": "caldinhos",
+      "price": 12,
+      "unitLabel": "porção 300ml",
+      "emoji": "🍲",
+      "description": "Caldo encorpado com bacon e linguiça."
+    },
+    {
+      "id": "refri-lata",
+      "name": "Refrigerante Lata",
+      "category": "bebidas",
+      "price": 6,
+      "unitLabel": "lata 350ml",
+      "emoji": "🥤",
+      "description": "Gelo e limão a parte."
     }
   ]
 }

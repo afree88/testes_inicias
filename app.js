@@ -1,8 +1,9 @@
-// ==== Configurações ====
-const WHATSAPP_NUMBER = "5599991756968";
+// ==== Configurações Globais (Serão sobrescritas via settings.json) ====
+let WHATSAPP_NUMBER = "5599991756968";
 
 // ==== Estado da Aplicação ====
 let catalogItems = [];
+let siteSettings = {};
 let cart = {}; // { productId: qt_in_cart }
 let quantities = {}; // { productId: current_display_qty } mantido igual ao site 1 para os cards
 
@@ -25,14 +26,56 @@ const toastElement = document.getElementById('toast');
 document.addEventListener('DOMContentLoaded', () => {
     createParticles();
     setupEventListeners();
-    loadCatalog();
 
     // Header scroll background effect
     window.addEventListener('scroll', () => {
         const header = document.getElementById('header');
         header.style.boxShadow = window.scrollY > 40 ? '0 4px 40px rgba(0,0,0,0.5)' : '';
     });
+
+    // Carregar configurações primeiro, depois o catálogo
+    loadSettings().then(() => {
+        loadCatalog();
+    });
 });
+
+// ==== Funções de Carregamento de Dados (CMS) ====
+async function loadSettings() {
+    try {
+        const response = await fetch('./data/settings.json');
+        if (response.ok) {
+            siteSettings = await response.json();
+
+            // Aplica as configurações
+            if (siteSettings.whatsapp_number) WHATSAPP_NUMBER = siteSettings.whatsapp_number;
+
+            // Atualiza DOM
+            const logoTitle = document.querySelector('.logo-name');
+            const logoSub = document.querySelector('.logo-sub');
+            const heroTitleText = document.querySelector('.hero h1');
+
+            if (logoTitle && siteSettings.site_title) {
+                // Preservando o & laranja se houver
+                logoTitle.innerHTML = siteSettings.site_title.replace('&', '<span class="logo-amp">&amp;</span>');
+            }
+            if (logoSub && siteSettings.site_subtitle) logoSub.textContent = siteSettings.site_subtitle;
+
+            // Hero Title com formatação basica via quebra se hover duas partes (primeira linha + segunda com gradient-text)
+            if (heroTitleText && siteSettings.hero_title) {
+                const words = siteSettings.hero_title.split(' ');
+                if (words.length > 3) {
+                    const part1 = words.slice(0, 2).join(' ');
+                    const part2 = words.slice(2).join(' ');
+                    heroTitleText.innerHTML = `${part1}<br /><span class="gradient-text">${part2}</span>`;
+                } else {
+                    heroTitleText.textContent = siteSettings.hero_title;
+                }
+            }
+        }
+    } catch (e) {
+        console.warn('Configurações settings.json não carregadas, usando padrão.', e);
+    }
+}
 
 // ==== Particulars (Hero - Site 1) ====
 function createParticles() {
