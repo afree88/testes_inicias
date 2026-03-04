@@ -46,6 +46,15 @@
       "unitLabel": "lata 350ml",
       "emoji": "🥤",
       "description": "Gelo e limão a parte."
+    },
+    {
+      "unitLabel": "por unidade",
+      "emoji": "🥟",
+      "id": "pastel-1",
+      "name": "pastel de frago",
+      "category": "assados",
+      "price": 3.5,
+      "description": "pastel de frago"
     }
   ]
 }
