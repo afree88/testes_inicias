@@ -56,6 +56,15 @@
       "price": 3.5,
       "description": "coxinhaaa mil grau ",
       "image": "/images/uploads/photo_2026-01-05_14-54-10.jpg"
+    },
+    {
+      "unitLabel": "por unidade",
+      "emoji": "🥟",
+      "id": "Pastel",
+      "name": "Pastel de frango ",
+      "category": "assados",
+      "price": 2,
+      "description": "O melhor pastel de frango da cidade "
     }
   ]
 }
