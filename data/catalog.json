@@ -8,7 +8,7 @@
       "unitLabel": "por unidade",
       "emoji": "🍗",
       "description": "Massa crocante por fora, macia por dentro.",
-      "image": "https://images.unsplash.com/photo-1628198622150-1c39062eb1d4?q=80&w=600&auto=format&fit=crop"
+      "image": "/images/uploads/coxinha9386.webp"
     },
     {
       "id": "bolinha-queijo",
@@ -18,7 +18,7 @@
       "unitLabel": "por unidade",
       "emoji": "🧀",
       "description": "Muito queijo derretido em uma casquinha dourada.",
-      "image": "https://images.unsplash.com/photo-1621508204620-8e6ad11ab4b8?q=80&w=600&auto=format&fit=crop"
+      "image": "/images/uploads/usuario-3367-9f66cc0c162c81b7a451f6e451b75240.jpg"
     },
     {
       "id": "empada-frango",
@@ -37,7 +37,8 @@
       "price": 6,
       "unitLabel": "lata 350ml",
       "emoji": "🥤",
-      "description": "Gelo e limão a parte."
+      "description": "Gelo e limão a parte.",
+      "image": "/images/uploads/202103031100_3ncw_.avif"
     },
     {
       "id": "caldo-feijao",
@@ -46,7 +47,8 @@
       "price": 12,
       "unitLabel": "porção 300ml",
       "emoji": "🍲",
-      "description": "Caldo encorpado com bacon e linguiça."
+      "description": "Caldo encorpado com bacon e linguiça.",
+      "image": "/images/uploads/caldo-feijao-preto.jpg"
     },
     {
       "unitLabel": "por unidade",
@@ -55,7 +57,8 @@
       "name": "pastel de frago",
       "category": "assados",
       "price": 3.5,
-      "description": "pastel de frago"
+      "description": "pastel de frago",
+      "image": "/images/uploads/3bcbcb15-pasteldefrangocom.webp"
     }
   ]
 }
