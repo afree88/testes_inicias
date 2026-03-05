@@ -27,16 +27,8 @@
       "price": 8,
       "unitLabel": "por unidade",
       "emoji": "🥧",
-      "description": "Massa podre que desmancha na boca com recheio farto."
-    },
-    {
-      "id": "caldo-feijao",
-      "name": "Caldo de Feijão",
-      "category": "caldinhos",
-      "price": 12,
-      "unitLabel": "porção 300ml",
-      "emoji": "🍲",
-      "description": "Caldo encorpado com bacon e linguiça."
+      "description": "Massa podre que desmancha na boca com recheio farto.",
+      "image": "/images/uploads/empadinha-de-frango.jpg"
     },
     {
       "id": "refri-lata",
@@ -46,6 +38,15 @@
       "unitLabel": "lata 350ml",
       "emoji": "🥤",
       "description": "Gelo e limão a parte."
+    },
+    {
+      "id": "caldo-feijao",
+      "name": "Caldo de Feijão",
+      "category": "caldinhos",
+      "price": 12,
+      "unitLabel": "porção 300ml",
+      "emoji": "🍲",
+      "description": "Caldo encorpado com bacon e linguiça."
     },
     {
       "unitLabel": "por unidade",
